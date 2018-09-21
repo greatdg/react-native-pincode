@@ -1,6 +1,5 @@
-/// <reference types="react" />
-import * as React from "react";
-import { StyleProp, TextStyle, ViewStyle } from "react-native";
+import * as React from 'react';
+import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 /**
  * Pin Code Component
  */
@@ -12,7 +11,7 @@ export declare type IProps = {
     buttonDeleteText?: string;
     cancelFunction?: () => void;
     previousPin?: string;
-    pinCodeStatus?: "initial" | "success" | "failure" | "locked";
+    pinCodeStatus?: 'initial' | 'success' | 'failure' | 'locked';
     buttonNumberComponent?: any;
     passwordLength: number;
     iconButtonDeleteDisabled?: boolean;
@@ -29,8 +28,6 @@ export declare type IProps = {
     styleButtonCircle?: StyleProp<ViewStyle>;
     styleTextButton?: StyleProp<TextStyle>;
     styleCircleHiddenPassword?: StyleProp<ViewStyle>;
-    styleCircleSizeEmpty?: number;
-    styleCircleSizeFull?: number;
     styleRowButtons?: StyleProp<ViewStyle>;
     styleColumnButtons?: StyleProp<ViewStyle>;
     styleEmptyColumn?: StyleProp<ViewStyle>;
@@ -66,24 +63,22 @@ export declare type IState = {
 export declare enum PinStatus {
     choose = "choose",
     confirm = "confirm",
-    enter = "enter",
+    enter = "enter"
 }
 declare class PinCode extends React.PureComponent<IProps, IState> {
-    _circleSizeEmpty: number;
-    _circleSizeFull: number;
     constructor(props: IProps);
     componentWillUpdate(nextProps: IProps): void;
     failedAttempt: () => Promise<void>;
     newAttempt: () => Promise<void>;
     onPressButtonNumber: (text: string) => Promise<void>;
-    renderButtonNumber: (text: string) => JSX.Element;
+    renderButtonNumber: (text: string) => any;
     endProcess: (pwd: string) => void;
     doShake(): Promise<void>;
     showError(): Promise<void>;
-    renderCirclePassword: () => JSX.Element;
-    renderButtonDelete: (opacity: number) => JSX.Element;
-    renderTitle: (colorTitle: string, opacityTitle: number, attemptFailed: boolean, showError: boolean) => JSX.Element;
-    renderSubtitle: (colorTitle: string, opacityTitle: number, attemptFailed: boolean, showError: boolean) => JSX.Element;
-    render(): JSX.Element;
+    renderCirclePassword: () => any;
+    renderButtonDelete: (opacity: number) => any;
+    renderTitle: (colorTitle: string, opacityTitle: number, attemptFailed: boolean, showError: boolean) => any;
+    renderSubtitle: (colorTitle: string, opacityTitle: number, attemptFailed: boolean, showError: boolean) => any;
+    render(): any;
 }
 export default PinCode;

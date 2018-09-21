@@ -1,5 +1,4 @@
 /// <reference path="../src/types.d.ts" />
-/// <reference types="react" />
 import * as React from 'react';
 import { StyleProp, ViewStyle, TextStyle } from 'react-native';
 export declare type IProps = {
@@ -95,14 +94,14 @@ export declare enum PinResultStatus {
     initial = "initial",
     success = "success",
     failure = "failure",
-    locked = "locked",
+    locked = "locked"
 }
 declare class PINCode extends React.PureComponent<IProps, IState> {
     constructor(props: IProps);
     componentWillMount(): Promise<void>;
     changeInternalStatus: (status: PinResultStatus) => void;
-    renderLockedPage: () => JSX.Element;
-    render(): JSX.Element;
+    renderLockedPage: () => any;
+    render(): any;
 }
-export declare function hasUserSetPinCode(): Promise<boolean>;
+export declare function hasUserSetPinCode(): Promise<any>;
 export default PINCode;

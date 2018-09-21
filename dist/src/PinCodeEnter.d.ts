@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import * as React from 'react';
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 import { PinStatus } from './PinCode';
@@ -73,6 +72,6 @@ declare class PinCodeEnter extends React.PureComponent<IProps, IState> {
     componentDidMount(): void;
     endProcess: (pinCode?: string | undefined) => Promise<void>;
     launchTouchID(): Promise<void>;
-    render(): JSX.Element;
+    render(): any;
 }
 export default PinCodeEnter;

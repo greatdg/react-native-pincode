@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import * as React from 'react';
 import { PinResultStatus } from '../index';
 export declare type IProps = {
@@ -38,11 +37,11 @@ declare class ApplicationLocked extends React.PureComponent<IProps, IState> {
     componentDidMount(): void;
     timer(): Promise<void>;
     componentWillUnmount(): void;
-    renderButton: () => JSX.Element;
-    renderTimer: (minutes: number, seconds: number) => JSX.Element;
-    renderTitle: () => JSX.Element;
-    renderIcon: () => JSX.Element;
-    renderErrorLocked: () => JSX.Element;
-    render(): JSX.Element;
+    renderButton: () => any;
+    renderTimer: (minutes: number, seconds: number) => any;
+    renderTitle: () => any;
+    renderIcon: () => any;
+    renderErrorLocked: () => any;
+    render(): any;
 }
 export default ApplicationLocked;
